@@ -19,6 +19,7 @@
     --shadow-color: rgba(0, 0, 0, .2);
     --cor-destaque: #00ADB5;
     --color-title: #00FFF5;
+    --gold-color: #D3AF37;
     
 }
 
@@ -38,6 +39,7 @@
     --shadow-color: rgba(0, 0, 0, .7);
     --main-color: #00ADB5;
     --cor-destaque: #00FFF5;
+    --gold-color: #D3AF37;
 }
 
 
@@ -603,13 +605,26 @@ div.about-content p {
 }
 
 .portfolio-box img {
-   width: 100%; 
-   transition: .5s ease;
+    width: 100%; 
+    min-width: 30%;
+    transition: 0.20s;
+    
+   
 }
 
 .portfolio-box:hover img {
-    transform: scale(1.1);
- }
+    transform: scale(1.20);
+    
+}
+
+.portfolio-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
 
 .portfolio-box .portfolio-layer {
     position: absolute;
@@ -617,8 +632,8 @@ div.about-content p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-    color: var(--white-color);
+    color: black;
+    text-shadow: var(--gold-color) 0 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -626,7 +641,7 @@ div.about-content p {
     text-align: center;
     padding: 0 4rem;
     opacity: 0;
-    transition: .5s ease;
+    transition: .40s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -651,7 +666,89 @@ p {
     background: var(--white-color);
     border-radius: 50%;
 }
+/* ############## */
+.portfolio-box {
+  display: flex;
+  flex-direction: column;
+}
 
+
+.portfolio-box img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-layer {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  /* background: #111; */
+}
+
+.tech-icons i {
+  font-size: 18px;
+  color: black;
+  text-shadow: var(--gold-color) 0 0 10px;
+  margin: 0 5px;
+}
+
+/* Área oculta inicialmente */
+.portfolio-footer {
+  background: #1f1f1f;
+  padding: 0 20px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  /* Remova qualquer position absoluta */
+  position: static;
+  width: 100%;
+  z-index: 1; /* Certifique-se de que o footer fique acima de outros elementos */
+}
+
+
+/* Expansão ao hover */
+.portfolio-box:hover .portfolio-footer {
+    max-height: 60px;
+    padding: 15px 20px;
+    opacity: 1;
+}
+
+
+/* Estilo da data */
+.project-date {
+    color: black;
+    text-shadow: var(--gold-color) 0 0 10px;
+    font-size: 14px;
+}
+
+/* Botão "Ver mais" */
+.view-more {
+    display: inline-block;
+    background-color: var(--gold-color);
+    color: #000;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+
+}
+
+.view-more:hover {
+    background-color: white;
+    color: #000;
+    transform: scale(1.2);
+}
+
+
+/* ##################### */
 .testimonial-container {
     display: flex;
     align-items: center;
