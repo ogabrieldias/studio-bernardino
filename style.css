@@ -12,7 +12,7 @@
 }
 
 :root {
-    --bg-color: #9c9a9a;
+    --bg-color:rgb(188, 212, 214);
     --text-color: #333;
     --main-color: #00FFF5;
     --white-color: #fdfdfd;
@@ -349,7 +349,7 @@ input.btn, a.btn {
     border-radius: .6rem;
     box-shadow: 0 .2rem .5rem var(--shadow-color);
     font-size: 1.6rem;
-    color: var(--bg-color);
+    color: var(--white-color);
     letter-spacing: .1rem;
     font-weight: 600;
     border: .2rem solid transparent;
@@ -881,12 +881,12 @@ p {
 .contato-item h3 {
   margin: 10px 0 5px;
   font-weight: bold;
-  color: var(--white-color);
+  color: var(--text-color);
 }
 
 .contato-item p {
   font-size: 0.95rem;
-  color: #ccc;
+  color: var(--text-color);
   
   text-decoration: none;
 }
