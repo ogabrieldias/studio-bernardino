@@ -12,7 +12,7 @@
 }
 
 :root {
-    --bg-color: #fdfdfd;
+    --bg-color: #9c9a9a;
     --text-color: #333;
     --main-color: #00FFF5;
     --white-color: #fdfdfd;
@@ -53,12 +53,12 @@ html{
 .modal,
 .modal-overlay,
 #modalOverlay {
-  display: none;
+    display: none;
 }
 
 .modal-overlay,
 #modalOverlay {
-  position: fixed;
+    position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -84,9 +84,9 @@ html{
 }
 
 body.modal-open {
-  overflow: hidden;
-  /* position: fixed;
-  width: 100%; */
+    overflow: hidden;  
+    /* position: fixed;
+    width: 100%; */
 }
 
 .modal {
@@ -826,43 +826,71 @@ p {
     margin-bottom: 3rem;
 }
 
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.contact form .input-box {
+.container_contato {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 20px;
+    /* background: #0f0f1a; */
+    color: #fff;
 }
 
-.contact form .input-box input,
-.contact form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--bg-color);
-    border-radius: .8rem;
-    margin: .7rem 0;
-    box-shadow: 0 .1rem .5rem var(--shadow-color);
+.contato {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px 20px;
+  background: #0f0f1a;
+  color: #fff;
 }
 
-.contact form .input-box input {
-    width: 49%;
+.contato-item {
+  text-align: center;
+  max-width: 200px;
+  transition: transform 0.3s ease;
 }
 
-.contact form textarea {
-    resize: none;
+.contato-item:hover {
+  transform: scale(1.20);
 }
 
-.contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
+.icone {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
+
+.icone i {
+  font-size: 26px;
+  color: var(--main-color);
+  transition: transform 0.3s ease;
+}
+
+.contato-item:hover .icone i {
+  transform: scale(1.2);
+}
+
+.contato-item h3 {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: var(--white-color);
+}
+
+.contato-item p {
+  font-size: 0.95rem;
+  color: #ccc;
+  
+  text-decoration: none;
+}
+
 
 .footer {
     display: flex;
@@ -920,9 +948,6 @@ p {
         left: 2.4rem;
     }
 
-    .home .profession-box .profession:nth-child(2) {
-        
-    }
 
     .home .profession-box .profession:nth-child(3) {
         left: 1.2rem;
